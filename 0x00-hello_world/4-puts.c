@@ -1,11 +1,19 @@
 #include <stdio.h>
+
+
+
 /**
- *  * main: It is the begining of the execution of the program
- *  *This is my first C program to use 'puts' function instead of 'printf' function
- *  */
+ *
+ *  * main - It is the start point
+ *
+ *   *
+ *
+ *    * Return: Always 0 (Success)
+ *
+ *     */
 
 int main(void)
-
+	
 {
 
 	puts("\"Programming is like building a multilingual puzzle");
