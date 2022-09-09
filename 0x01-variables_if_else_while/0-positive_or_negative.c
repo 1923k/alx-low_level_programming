@@ -21,21 +21,21 @@ int main(void)
 	 /*The below if statement checks for a positve number "n" above zero and prints it*/ 
 	if(n > 0) 
 	{
-		printf  ("%d is positive\n", n);  
+		printf("%d is positive\n", n);  
 
 	}
 
 	/*The below else if statement checks for negaive number "n" below zero and prints it*/  
 	else if(n < 0) 
 	{
-		printf  ("%d is negative\n", n);  
+		printf("%d is negative\n", n);  
 
 	}
 
 	/*Then the below else statement for for zero number "n" and prints it is all the above statement did work*/ 
 	else
 	{
-		printf  ("%d is zero\n", n); 
+		printf("%d is zero\n", n); 
 	}
 	
 	return (0);
