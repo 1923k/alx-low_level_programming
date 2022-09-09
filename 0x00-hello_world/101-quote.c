@@ -2,8 +2,9 @@
 #include <unistd.h>
 
 /**
- * Las task of 0x00. C - Hello, World
- * 
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
