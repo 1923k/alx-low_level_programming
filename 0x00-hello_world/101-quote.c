@@ -2,8 +2,8 @@
 #include <unistd.h>
 
 /**
- * In the main is the begining of the executing of the program
- * This is tha last task
+ * Las task of 0x00. C - Hello, World
+ * 
  */
 int main(void)
 {
