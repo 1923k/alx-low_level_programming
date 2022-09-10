@@ -1,7 +1,10 @@
-/*main - start*/
+/*Task 0 - By Sole*/
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+/*
+ * Main - start of execution
+ */
 int main(void)
 {
 	int n;
