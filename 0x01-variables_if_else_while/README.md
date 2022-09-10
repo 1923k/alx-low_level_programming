@@ -87,5 +87,26 @@
 - You are not allowed to use any variable of type char
 - All your code should be in the main function
 
+14. Bonus Bonus Bonus
+- Trail Whitespace: Solution 
+If you use vi for your editing like I do, this might be helpful with this Betty of a lady that keeps harrasing us 🤓
 
+1. Remove Trailing whitespace
+In vi command mode type:
 
+esc:%s/\s\+$//e 
+
+Press Enter
+
+2. Line number for code
+In vi command mode type,
+
+esc :set number 
+
+Press Enter
+
+3. Go to line generating error code
+In vi command mode
+Enter the line number, press shift key ⬆️ on your keypad, then G.
+
+NB: to enter command mode in vi, press Esc.
