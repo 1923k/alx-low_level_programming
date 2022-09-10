@@ -3,7 +3,7 @@
 #include <time.h>
 #include <stdio.h>
 #include <string.h>
-/*
+/**
  * Main - start of execution
  */
 
