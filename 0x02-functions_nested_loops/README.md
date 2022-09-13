@@ -43,3 +43,10 @@ Repo:
 - GitHub repository: alx-low_level_programming
 - Directory: 0x02-functions_nested_loops
 - File: 3-islower.c
+
+4. isalpha
+- Write a function that checks for alphabetic character.
+- Prototype: int _isalpha(int c);
+- Returns 1 if c is a letter, lowercase or uppercase
+- Returns 0 otherwise
+
