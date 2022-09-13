@@ -31,3 +31,15 @@ Repo:
 - Directory: 0x02-functions_nested_loops
 - File: 2-print_alphabet_x10.c
 
+3. islower
+- Write a function that checks for lowercase character.
+- Prototype: int _islower(int c);
+- Returns 1 if c is lowercase
+- Returns 0 otherwise
+- FYI: The standard library provides a similar function: islower. Run man islower to learn more.
+
+Repo:
+
+- GitHub repository: alx-low_level_programming
+- Directory: 0x02-functions_nested_loops
+- File: 3-islower.c
