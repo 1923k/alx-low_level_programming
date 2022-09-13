@@ -102,4 +102,7 @@ Repo:
 - You are allowed to use the standard library
 
 
-
+14. In computer class, the first assignment was to write a program to print the first 100 Fibonacci numbers. Instead, I wrote a program that would steal passwords of students. My teacher gave me an A
+- Write a program that prints the first 50 Fibonacci numbers, starting with 1 and 2, followed by a new line.
+- The numbers must be separated by comma, followed by a space , 
+- You are allowed to use the standard library
