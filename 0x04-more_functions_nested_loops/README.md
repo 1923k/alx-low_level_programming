@@ -76,3 +76,15 @@
 - You are allowed to use the standard library
 - Your program will be compiled with this command: gcc -Wall -pedantic -Werror -Wextra -std=gnu89 100-prime_factor.c -o 100-prime_factor -lm
 
+
+12. Numbers have life; they're not just symbols on paper
+
+- Write a function that prints an integer.
+- Prototype: void print_number(int n);
+- You can only use _putchar function to print
+- You are not allowed to use long
+- You are not allowed to use arrays or pointers
+- You are not allowed to hard-code special values
+
+
+
