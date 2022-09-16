@@ -40,6 +40,14 @@
 - If n is 0 or less, the function should only print \n
 
 
+7. I feel like I am diagonally parked in a parallel universe
+- Write a function that draws a diagonal line on the terminal.
+- Prototype: void print_diagonal(int n);
+- You can only use _putchar function to print
+- Where n is the number of times the character \ should be printed
+- The diagonal should end with a \n
+- nIf n is 0 or less, the function should only print a \n
+
 
 
 
