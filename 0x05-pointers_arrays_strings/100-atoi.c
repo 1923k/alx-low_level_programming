@@ -1,10 +1,11 @@
 #include <stdio.h>
 /**
- * main - where program execution starts
+ * main - check the code for Holberton School students.
  * _atoi - function that convert a string to an integer.
  * @s: string
- * Return: integer
+ * Always 0.
  */
+int _atoi(char *);
 int main(void)
 {
 int n;
