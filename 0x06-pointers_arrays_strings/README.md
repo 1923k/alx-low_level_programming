@@ -14,6 +14,12 @@
 - Prototype: void reverse_array(int *a, int n);
 - Where n is the number of elements of the array
 
+5. Always look up
+- Write a function that changes all lowercase letters of a string to uppercase.
+- Prototype: char *string_toupper(char *);
 
+6. Expect the best. Prepare for the worst. Capitalize on what comes
+- Write a function that capitalizes all words of a string.
+- Prototype: char *cap_string(char *)
 
 
