@@ -1,4 +1,4 @@
-#include "Task 6"
+#include "main.h"
 /**
  * prime2 - Makes possible to evaluate from 1 to n
  * @a: same number as n
