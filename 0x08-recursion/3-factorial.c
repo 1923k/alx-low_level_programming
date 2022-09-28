@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * factorial - gets factorial of n
+ * _pow_recursion - raises x to the power of y
  * @n: integer
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
