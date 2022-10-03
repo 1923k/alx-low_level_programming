@@ -9,19 +9,19 @@
  */
 char *_strdup(char *str)
 {
-char *duplicate_num;
+char *dup_num;
 int i = 0, len = 0;
 
-duplicate_num = malloc(sizeof(char) * (len + 1));
-if (str == 0 || duplicate_num == NULL)
+dup_num = malloc(sizeof(char) * (len + 1));
+if (str == 0 || dup_num == NULL)
 {
 return (NULL);
 }
 for (i = 0; str[i]; i++)
 {
-duplicate_num[i] = str[i];
+dup_num[i] = str[i];
 len++;
 }
-duplicate_num[len] = '\0';
-return (duplicate_num);
+dup_num[len] = '\0';
+return (dup_num);
 }
