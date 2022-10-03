@@ -22,4 +22,12 @@ if (s == NULL)
 {
 return (NULL);
 }
+i = 0;
+while (i < size)
+{
+s[i] = c;
+i++;
+}
+s[i] = '\0';
+return (s);
 }
