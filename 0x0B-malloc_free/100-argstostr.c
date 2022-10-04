@@ -7,7 +7,7 @@
  * @av: pointer to array
  * Return: arguments as strings
  */
-char *argstostr(int ac, char **av)
+char *argstostr (int ac, char **av)
 {
 int size, count, count1, count2 = 0;
 char *ptr;
