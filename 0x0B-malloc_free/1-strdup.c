@@ -2,26 +2,47 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * _strdup - allocates space in memory
- * @str: input string
- * Return: returns a pointer to a newly
- * allocated space in memory
+ * _strlen - return length of a string
+ * @s: char type
+ * Return:  length of string
+ */
+int _strlen(char *s)
+{
+int a;
+
+for (a = 0; s[a] != '\0'; a++)
+{
+
+}
+return (a);
+/**
+ * *_strdup - function to return pointer to string
+ * @str: pointer to string array input
+ * Return: pointer to string created
  */
 char *_strdup(char *str)
 {
-char *dup_num;
-int i = 0, len = 0;
+char *ptr;
+int size;
+int x;
 
-dup_num = malloc(sizeof(char) * (len + 1));
-if (str == 0 || dup_num == NULL)
+if (str == NULL)
 {
 return (NULL);
 }
-for (i = 0; str[i]; i++)
+size = _strlen(str) + 1;
+ptr = malloc(size *sizeof(char));
+
+x = 0;
+while (x < size)
 {
-dup_num[i] = str[i];
-len++;
+if (ptr == NULL)
+{
+if (ptr == NULL)
 }
-dup_num[len] = '\0';
-return (dup_num);
+ptr[x] = str[x];
+x++;
+}
+return (ptr);
+}
 }
