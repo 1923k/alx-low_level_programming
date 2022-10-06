@@ -1,32 +1,84 @@
 #include "main.h"
-#include "stdio.h"
+
+int find_len(char *str);
+char *create_xarray(int size);
+char *iterate_zeroes(char *str);
+void get_prod(char *prod, char *mult, int digit, int zeroes);
+void add_nums(char *final_prod, char *next_prod, int next_len);
 
 /**
- * main - multiplies two positive numbers
- * @argc: n arguments
- * @argv: args
- * Return: int
+ * find_len - Finds the length of a string.
+ * @str: The string to be measured.
+ * Return: The length of the string.
  */
-int main(int argc, char *argv[])
+int find_len(char *str)
 {
-unsigned long mul;
-int i, j;
+int len = 0;
 
-if (argc != 3)
+while (*str++)
+len++;
+return (len);
+}
+/**
+ * create_xarray - Creates an array of chars and initializes it with
+ * the character 'x'. Adds a terminating null byte.
+ * @size: The size of the array to be initialized.
+ * Description: If there is insufficient space, the
+ * function exits with a status of 98.
+ * Return: A pointer to the array.
+ */
+char *create_xarray(int size)
 {
-printf("Error\n");
+char *array;
+int index;
+
+array = malloc(sizeof(char) * size);
+if (array == NULL)
+exit(98);
+for (index = 0; index < (size - 1); index++)
+array[index] = 'x';
+array[index] = '\0';
+return (array);
 }
-for (i = 1; i < argc; i++)
+/**
+ * iterate_zeroes - Iterates through a string of numbers containing
+ * leading zeroes until it hits a non-zero number.
+ * @str: The string of numbers to be iterate through.
+ * Return: A pointer to the next non-zero element.
+ */
+char *iterate_zeroes(char *str)
 {
-for (j = 0; argv[i][j] != '\0'; j++)
-{
-if (argv[i][j] > 57 || argv[i][j] < 48)
-{
-printf("Error\n");
+while (*str && *str == '0')
+str++;
+return (str);
 }
-}
-}
-mul = atol(argv[1]) * atol(argv[2]);
-printf("%lu\n", mul);
-return (0);
-}
+/**
+ * get_digit - Converts a digit character to a corresponding int.
+ * @c: The character to be converted.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
