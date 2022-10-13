@@ -1,42 +1,62 @@
-#include <stdio.h>
+/**
+ * File: 3-print_all.c
+ * Auth: Tolulope Fakunle
+ */
 #include "variadic_functions.h"
+#include <stdio.h>
 #include <stdarg.h>
+
+void print_char(va_list arg);
+void print_int(va_list arg);
+void print_float(va_list arg);
+void print_string(va_list arg);
+void print_all(const char * const format, ...);
 /**
- * op_c - Print character .
- * @form: name va_list
- * Return: Nothing.
+ * print_char - Prints a char.
+ * @arg: A list of arguments pointing to
+ * the character to be printed.
  */
-void op_c(va_list form)
+void print_char(va_list arg)
 {
-printf("%c", va_arg(form, int));
+char letter;
+
+letter = va_arg(arg, int);
+printf("%c", letter);
 }
 /**
- * op_i - Print Integer
- * @form: name va_list
- * Return: Nothing.
+ * print_int - Prints an int.
+ * @arg: A list of arguments pointing to
+ * the integer to be printed.
  */
-void op_i(va_list form)
+void print_int(va_list arg)
 {
-printf("%i", va_arg(form, int));
+int num;
+
+num = va_arg(arg, int);
+printf("%d", num);
 }
 /**
- * op_f - print FLoat numbers
- * @form: name of va_list
- * Return: Nothing.
+ * print_float - Prints a float.
+ * @arg: A list of arguments pointing to
+ *the float to be printed.
  */
-void op_f(va_list form)
+void print_float(va_list arg)
 {
-printf("%f", va_arg(form, double));
+float num;
+
+num = va_arg(arg, double);
+printf("%f", num);
 }
 /**
- * op_s -print string
- * @form: name va_list
- * Return: Nothing.
+ * print_string - Prints a string.
+ * @arg: A list of arguments pointing to
+ * the string to be printed.
  */
-void op_s(va_list form)
+void print_string(va_list arg)
 {
 char *str;
-str = va_arg(form, char *);
+
+str = va_arg(arg, char *);
 if (str == NULL)
 {
 printf("(nil)");
@@ -45,41 +65,38 @@ return;
 printf("%s", str);
 }
 /**
- * print_all - check the code for Holberton School students.
- * @format: number of arguments in character format
- * Return: Nothing.
+ * print_all - Prints anything, followed by a new line.
+ * @format: A string of characters representing the argument types.
+ * @...: A variable number of arguments to be printed.
+ * Description: Any argument not of type char, int, float,
+ * or char * is ignored.
+ * If a string argument is NULL, (nil) is printed instead.
  */
 void print_all(const char * const format, ...)
 {
-va_list all;
-unsigned int i, j;
+va_list args;
+int i = 0, j = 0;
 char *separator = "";
-
-f ops[] = {
-{"c", op_c},
-{"i", op_i},
-{"f", op_f},
-{"s", op_s},
+printer_t funcs[] = {
+{"c", print_char},
+{"i", print_int},
+{"f", print_float},
+{"s", print_string}
 };
-va_start(all, format);
-i = 0;
-while (format && format[i])
+va_start(args, format);
+while (format && (*(format + i)))
 {
 j = 0;
-while (j < 4)
-{
-if (ops[j].op[0] == format[i])
+while (j < 4 && (*(format + i) != *(funcs[j].symbol)))
+j++;
+if (j < 4)
 {
 printf("%s", separator);
+funcs[j].print(args);
 separator = ", ";
-ops[j].f(all);
-break;
-}
-j++;
 }
 i++;
 }
 printf("\n");
-va_end(all);
-}
+va_end(args);
 }
