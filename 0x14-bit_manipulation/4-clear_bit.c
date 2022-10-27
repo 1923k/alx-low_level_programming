@@ -1,4 +1,4 @@
-/**
+/*
  * File: 4-clear_bit.c
  * Author: Kefuoe Sole
  */
